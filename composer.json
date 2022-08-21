@@ -10,7 +10,9 @@
         "laravel-doctrine/orm": "^1.8",
         "laravel/framework": "^9.2",
         "laravel/sanctum": "^2.14.1",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "ramsey/uuid": "^4.4",
+        "spatie/laravel-data": "^2.0"
     },
     "require-dev": {
         "darkaonline/l5-swagger": "^8.3",
