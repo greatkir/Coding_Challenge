@@ -20,13 +20,17 @@ class Company
     #[Column(type: "string", length: 250)]
     protected string $name;
 
-    #[Column(type: "integer", name: "debtor_limit")]
+    #[Column(type: "integer")]
     protected int $debtorLimit;
+
+    #[Column(type: 'integer')]
+    protected int $debt;
 
     public function __construct(string $name, int $companyDebtorLimit)
     {
         $this->name = $name;
         $this->debtorLimit = $companyDebtorLimit;
+        $this->debt = 0;
     }
 
     /**
@@ -35,5 +39,17 @@ class Company
     public function getId(): int
     {
         return $this->id;
+    }
+
+    public function remainingDebtorLimit(): int
+    {
+        return $this->debtorLimit - $this->debt;
+    }
+
+    public function addToDebt(int $diff): void
+    {
+        if (($this->debt += $diff) < 0) {
+            throw new \DomainException('It`s not possible to have a negative debt');
+        }
     }
 }

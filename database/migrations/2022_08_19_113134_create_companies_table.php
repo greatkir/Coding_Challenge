@@ -19,6 +19,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('debtor_limit');
+            $table->integer('debt');
             $table->timestamps();
         });
     }

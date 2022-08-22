@@ -1,6 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Http\Controllers\CompanyCreateController;
+use App\Http\Controllers\InvoiceCreateController;
+use App\Http\Controllers\InvoiceMarkPaidController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/company', CompanyCreateController::class);
+Route::post('/invoice', InvoiceCreateController::class);
+Route::patch('/invoice/{id}/markPaid', InvoiceMarkPaidController::class);

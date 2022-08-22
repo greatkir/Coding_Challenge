@@ -58,10 +58,13 @@ final class CompanyCreateController
             ),
         ]
     )]
-    public function __invoke(CompanyCreateRequest $request, CompanyCreateAction $createCompany, ResponseFactory $responseFactory)
-    {
+    public function __invoke(
+        CompanyCreateRequest $request,
+        CompanyCreateAction $createCompany,
+        ResponseFactory $responseFactory
+    ) {
         $newCompanyId = ($createCompany)(CompanyDto::from($request->validated()));
 
-        return $responseFactory->make(['New company Id' => $newCompanyId]);
+        return $responseFactory->make(['New company Id' => $newCompanyId], Response::HTTP_CREATED);
     }
 }

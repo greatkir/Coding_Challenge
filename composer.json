@@ -7,6 +7,7 @@
     "require": {
         "php": "^8.1.2",
         "guzzlehttp/guzzle": "^7.2",
+        "laravel-doctrine/extensions": "^1.5",
         "laravel-doctrine/orm": "^1.8",
         "laravel/framework": "^9.2",
         "laravel/sanctum": "^2.14.1",
