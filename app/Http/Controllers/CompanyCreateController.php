@@ -11,7 +11,7 @@ use Illuminate\Routing\ResponseFactory;
 use OpenApi\Attributes as OA;
 use Symfony\Component\HttpFoundation\Response;
 
-#[OA\Info(version: "0.1", title: "Billie Backend coding challenge API")]
+#[OA\Info(version: "0.1", title: "A small factoring API")]
 final class CompanyCreateController
 {
     #[OA\Post(

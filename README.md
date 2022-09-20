@@ -1,4 +1,4 @@
-## Billie coding assignment
+## Coding assignment
 
 To run the project it's necessary to go through several steps:
 
